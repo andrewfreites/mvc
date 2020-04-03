@@ -1,0 +1,11 @@
+<?php
+define('URL','http://localhost/mvc/');
+define('CSS','http://localhost/mvc/public/css/default.css');
+define('DARK','http://localhost/mvc/public/css/dark.css');
+define('ACTIVE','http://localhost/mvc/public/js/css.js');
+define('HOST','localhost');
+define('DB','mvc');
+define('USER','root');
+define('PASSWORD','1234');
+define('CHARSET','utf8mb4');
+?>

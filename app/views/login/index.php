@@ -6,12 +6,15 @@
     <title>Login</title>
 </head>
 <body>
-<form action="" method="post" id="login">
-    <label for="username">Username: </label>
-    <input type="text" name="username" id="username">
+<form action="<?php echo constant('URL');?>login/login" method="post" id="login">
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email" size="12" required> 
     <label for="password">Password: </label>
-    <input type="password" name="password" id="password">
+    <input type="password" name="password" id="password" size="12" required>
     <input type="submit" value="Login">
+    <a href="<?php echo constant('URL');?>registration">Sign Up</a>
+    <a href="<?php echo constant('URL');?>passrecovery">Forget Password</a>
+    <?php echo $this->message; ?>
 </form>
 </body>
 </html>

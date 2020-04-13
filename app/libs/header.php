@@ -1,6 +1,6 @@
 <?php
-if(isset($_SESSION['rol'])){
-switch($_SESSION['rol']){
+if(isset($_SESSION['role'])){
+switch($_SESSION['role']){
         case 1:
             require 'app/views/header-client.php';
         break;

@@ -14,10 +14,10 @@
         <li><a href="<?php echo constant('URL');?>admin-services" id="admin-services">Services</a></li>
         <li><a href="<?php echo constant('URL');?>admin-orders" id="admin-orders">Orders</a></li>
         <li><a href="<?php echo constant('URL');?>admin-tickets" id="admin-tickets">Support Tickets</a></li>
+        <li><a href="<?php echo constant('URL');?>libs/logout" id="logout">Salir</a></li>
     </ul>
     </nav>
 </header>
-    </div>
 <script src="<?php echo constant('ACTIVE'); ?>"></script>
 </body>
 </html>

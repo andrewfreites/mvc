@@ -1,10 +1,10 @@
 <?php
-class About extends Controller{
+class Logout extends Controller{
     function __construct(){
         parent::__construct();
     }
     function render(){
-        $this->view->render('about/index');
+        $this->view->render('logout/index');
     }
 }
 ?>

@@ -1,8 +1,8 @@
 <?php
-    if(isset($_SESSION['rol'])){
-        switch($_SESSION['rol']){
+    if(isset($_SESSION['role'])){
+        switch($_SESSION['role']){
         case 1:
-            header('location: http://localhost/mvc/consulta');
+            header('location: http://localhost/mvc/services');
         break;
         case 2:
             header('location: http://localhost/mvc/manager');
@@ -10,9 +10,7 @@
         case 3:
             header('location: http://localhost/mvc/admin');
         break;
-
         default:
-
         }
     }
 ?>

@@ -15,7 +15,7 @@
         <li><a href="<?php echo constant('URL');?>blog" id="blog">Blog</a></li>
         <li><a href="<?php echo constant('URL');?>profile" id="profile">Profile</a></li>
         <li><a href="<?php echo constant('URL');?>about" id="about">About Us</a></li>
-        <li><a href="<?php echo constant('URL');?>logout" id="logout">Salir</a></li>
+        <li><a href="<?php echo constant('URL');?>main/logout" id="logout">Salir</a></li>
     </ul>
     </nav>
 </header>

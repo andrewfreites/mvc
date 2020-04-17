@@ -1,5 +1,4 @@
 <?php
-session_start();
 Class Registration extends Controller{
     function __construct(){
         parent::__construct();

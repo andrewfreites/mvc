@@ -5,7 +5,16 @@ class Main extends Controller{
         $this->view->message=null;
     }
     function render(){
+        if (!isset($_SESSION)){
+            session_start();
+        }
         $this->view->render('main/index');
+    }
+    function logout(){
+        session_start();
+        session_unset();
+        session_destroy(); 
+        $this->render();
     }
 }
 ?>

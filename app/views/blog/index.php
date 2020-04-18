@@ -12,7 +12,7 @@
 <p>Blog</p>
 <div id="news"></div>
 <div id="more-news"></div>
-<script src="<?php echo constant('URL');?>public/js/news.js"></script>
+<script src="<?php echo constant('URL');?>public/js/blog.js"></script>
 <?php
  require 'app/views/footer.php';
 ?>

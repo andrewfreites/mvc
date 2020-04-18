@@ -25,7 +25,7 @@ async function loadItems(){
         const items= data[1]; //elemnts of query
         page = data[2].page; 
         renderItems(items);
-    } else if (response.response=='200'){
+    } else if (response.response=='400'){
         alert('no more items to load');
     }
 }

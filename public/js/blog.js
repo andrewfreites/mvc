@@ -1,15 +1,15 @@
 let block=false, page=0;
 
 window.onload=async function(){
-    //load items
+    this.loadItems();
 }
 
 window.addEventListener("scroll", async function(event){
     const scrollHeight= this.scrollY;
     const viewportHeight= document.documentElement.clientHeight;
-    const moreScroll= document.querySelector("#more-news").offsetTop;
+    const moreScroll= document.querySelector('#more-news').offsetTop;
     const currentScroll= scrollHeight + viewportHeight;
-    if((currentScroll>=moreScroll)&&(block==false)){ //when scroll reach the bottom
+    if((currentScroll>=moreScroll)&&block===false){ //when scroll reach the bottom
         block=true;
         this.setTimeout(()=>{
             loadItems();
@@ -25,13 +25,14 @@ async function loadItems(){
         const items= data[1]; //elemnts of query
         page = data[2].page; 
         renderItems(items);
-    } else if (response.response=='200'){
+    } else if (response.response=='400'){
         alert('no more items to load');
     }
 }
 
 function requestData(n){
-    const url = 'http://localhost/mvc/blog/scroll?action=more&page=' + n; //I believe that here is the error but I don't know
+    const url = 'http://localhost/mvc/libs/api.php?action=more&page=' + n; //I believe that here is the error but I don't know
+    console.log(url);
     const response = this.fetch(url)
     .then(result=>result.json())
     .then(data=>data)
@@ -41,7 +42,7 @@ function requestData(n){
 function renderItems(data){
     let news=document.querySelector('#news');
     data.forEach(element => {
-        news.innerHTML+=`
+        news.innerHTML+= `
         <div class="news">
             <div class="image">
                 <img src="${element.image}" alt="">
@@ -59,7 +60,7 @@ function renderItems(data){
                 ${element.text};
             </div>
         </div>
-        `
+        `;
     });
     
 }

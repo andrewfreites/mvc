@@ -1,4 +1,3 @@
-//Select active tab of the navigation bar
 window.onload= active;
 function active(){
     let url= window.location.href;

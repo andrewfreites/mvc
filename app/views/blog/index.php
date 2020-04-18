@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +13,6 @@
  require 'app/libs/header.php';
 ?>
 <p>Blog</p>
-<div id="news"></div>
-<div id="more-news"></div>
-<script src="<?php echo constant('URL');?>public/js/news.js"></script>
 <?php
  require 'app/views/footer.php';
 ?>

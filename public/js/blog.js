@@ -31,7 +31,7 @@ async function loadItems(){
 }
 
 function requestData(n){
-    const url = 'http://localhost/mvc/libs/api.php?action=more&page=' + n; //I believe that here is the error but I don't know
+    const url = 'http://localhost/mvc/app/libs/api.php?action=more&page=' + n; //I believe that here is the error but I don't know
     console.log(url);
     const response = this.fetch(url)
     .then(result=>result.json())

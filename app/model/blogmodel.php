@@ -5,7 +5,7 @@ Class blogModel extends Model{
     {
         parent::__construct();
     }
-    function getData($section){
+    public function getData($section){
         try{
             $query=$this->db->connect()->prepare('SELECT * FROM news LIMIT :section,2');
             $query->execute(['section' => $section]);

@@ -22,7 +22,7 @@ async function loadItems(){
     const data =await requestData(page);
     const response=data[0]; //result value 200 or 400
     if (response.response=='200'){
-        const items= data[1]; //elemnts of query
+        const items= data[1]; //elements of query
         page = data[2].page; 
         renderItems(items);
     } else if (response.response=='400'){
@@ -31,7 +31,8 @@ async function loadItems(){
 }
 
 function requestData(n){
-    const url = 'http://localhost/mvc/app/libs/api.php?action=more&page=' + n; //I believe that here is the error but I don't know
+    //I believe that here is the error but I don't know
+    const url = 'http://localhost/mvc/app/libs/api.php?action=more&page=' + n;
     console.log(url);
     const response = this.fetch(url)
     .then(result=>result.json())

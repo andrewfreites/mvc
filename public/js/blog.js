@@ -25,8 +25,9 @@ async function loadItems(){
         const items= data[1]; //elements of query
         page = data[2].page; 
         renderItems(items);
+        console.log('there is items');
     } else if (response.response=='400'){
-        alert('no more items to load');
+        console.log('no more items');
     }
 }
 
@@ -35,8 +36,9 @@ function requestData(n){
     const url = 'http://localhost/mvc/app/libs/api.php?action=more&page=' + n;
     console.log(url);
     const response = this.fetch(url)
-    .then(result=>result.json())
-    .then(data=>data)
+    .then((result)=>result.json())
+    .then((data)=>data)
+    console.log(response);
     return response;
 }
 

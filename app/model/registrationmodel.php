@@ -1,6 +1,6 @@
 <?php
 session_start();
-Class registrationModel extends Model{
+class registrationModel extends Model{
     public function __construct()
     {
         parent::__construct();

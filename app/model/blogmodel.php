@@ -1,6 +1,6 @@
 <?php
 session_start();
-Class blogModel extends Model{
+class blogModel extends Model{
     public function __construct()
     {
         parent::__construct();
@@ -36,3 +36,4 @@ Class blogModel extends Model{
         }
     }
 }
+?>

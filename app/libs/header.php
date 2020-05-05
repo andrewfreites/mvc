@@ -1,19 +1,19 @@
 <?php
-if(isset($_SESSION['role'])){
-switch($_SESSION['role']){
+if (isset($_SESSION['role'])) {
+    switch ($_SESSION['role']) {
         case 1:
             require 'app/views/header-client.php';
-        break;
+            break;
         case 2:
             require 'app/views/header-manager.php';
-        break;
+            break;
         case 3:
             require 'app/views/header-admin.php';
-        break;
+            break;
         default:
             require 'app/views/header.php';
     }
-} else{
+} else {
     require 'app/views/header.php';
 }
 ?>

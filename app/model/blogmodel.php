@@ -11,8 +11,7 @@ class blogModel extends Model{
             $query->execute(['section' => $section]);
             $result=[];
             $items=[];
-            $n=$query->rowCount();
-            if($n){
+            if($query->rowCount()>0){
                 while($row=$query->fetch(PDO::FETCH_ASSOC)){
                 $item= Array(
                     'title' => $row['title'],
@@ -23,9 +22,7 @@ class blogModel extends Model{
                 );
                 array_push($items, $item);
                 }
-                array_push($result, Array('response' => "200"));
-                array_push($result, $items);
-                array_push($result, Array('page' => ($section + $n)));
+                array_push($result, Array('response' => "200"), $items, array('page' => ($section + $query->rowCount())));
                 return $result;
             } else{
                 array_push($result, Array('response' => "400"));
